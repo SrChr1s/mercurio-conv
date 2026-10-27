@@ -18,7 +18,7 @@ Límites conocidos: los SVG con texto se dibujan con una fuente del sistema (Lib
 
 ## Instalar
 
-Descarga el paquete desde la página de [Releases](https://github.com/SrChr1s/mercurio-conversor/releases) y comprueba su huella con `SHA256SUMS.txt`.
+Descarga el paquete desde la página de [Releases](https://github.com/SrChr1s/mercurio-conv/releases) y comprueba su huella con `SHA256SUMS.txt`.
 
 ### Windows
 

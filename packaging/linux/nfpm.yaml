@@ -6,7 +6,7 @@ version: ${VERSION}
 section: graphics
 priority: optional
 maintainer: Chris <c.salazar.vzla@gmail.com>
-homepage: https://github.com/SrChr1s/mercurio-conversor
+homepage: https://github.com/SrChr1s/mercurio-conv
 description: |
   Mercurio: conversor de imágenes por lotes.
   Convierte entre JPEG, PNG, WebP, GIF, BMP, TIFF y SVG, con calidad,
