@@ -27,6 +27,10 @@ func main() {
 		Frameless: true, // custom title bar lives in the Svelte header
 		MinWidth:  760,
 		MinHeight: 600,
+		// En Linux, con 0 Wails fija el máximo al tamaño del monitor donde arrancó
+		// y la ventana no crece al moverla a otro más grande.
+		MaxWidth:  16384,
+		MaxHeight: 16384,
 		AssetServer: &assetserver.Options{
 			Assets: assets,
 		},
