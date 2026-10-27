@@ -217,7 +217,7 @@
   .controls button:hover { background: var(--tint); color: var(--on-dark); }
   .controls .close:hover { background: var(--primary); color: var(--on-primary); }
   .brand { display: flex; align-items: center; gap: 10px; }
-  .mark { font-size: 19px; font-variation-settings: 'wght' 500; letter-spacing: 0.4px; }
+  .mark { font-size: 20px; font-variation-settings: 'wght' 520; letter-spacing: 0; }
   .tag { color: var(--fog); font-size: 14px; padding-left: 14px; border-left: 1px solid var(--line-strong); }
   .spacer { flex: 1; }
   .local { display: inline-flex; align-items: center; gap: 6px; color: var(--fog); font-size: 13px; }
@@ -234,7 +234,7 @@
   }
   .head { display: flex; align-items: center; gap: 8px; padding: 16px 16px 14px 20px; border-bottom: 1px solid var(--line); }
   .title { flex: 1; display: grid; gap: 1px; min-width: 0; }
-  h2 { font-size: 19px; line-height: 1.2; letter-spacing: 0.3px; }
+  h2 { font-size: 19px; line-height: 1.2; letter-spacing: 0; }
   .sub { font-size: 13px; color: var(--fog); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .scroll { overflow-y: auto; min-height: 0; }
 

@@ -54,7 +54,7 @@
   /* Keep the hover state cheap: nothing animates while a file is held over the window. */
   .hero.active .sky i { animation: none; }
   .copy { display: grid; gap: 8px; max-width: 520px; }
-  h1 { font-size: 36px; line-height: 1.15; letter-spacing: 0.4px; text-wrap: balance; }
+  h1 { font-size: 36px; line-height: 1.15; letter-spacing: -0.4px; text-wrap: balance; }
   p { color: var(--fog); font-size: 17px; text-wrap: balance; font-variation-settings: 'wght' 360; }
   .hint { color: var(--fog); font-size: 13px; opacity: 0.75; margin-top: -8px; }
   @keyframes twinkle { 50% { opacity: 0.12; } }
