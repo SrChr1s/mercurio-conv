@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1e1e2a" />
+      <stop offset="1" stop-color="#14141d" />
+    </linearGradient>
+    <radialGradient id="body" cx="0.34" cy="0.3" r="0.85">
+      <stop offset="0" stop-color="#ecebf5" />
+      <stop offset="0.38" stop-color="#b3aecb" />
+      <stop offset="0.78" stop-color="#5b5774" />
+      <stop offset="1" stop-color="#2a2839" />
+    </radialGradient>
+    <radialGradient id="shade" cx="0.3" cy="0.26" r="0.95">
+      <stop offset="0.45" stop-color="#0e0e18" stop-opacity="0" />
+      <stop offset="1" stop-color="#0e0e18" stop-opacity="0.72" />
+    </radialGradient>
+    <radialGradient id="crater" cx="0.42" cy="0.42" r="0.6">
+      <stop offset="0" stop-color="#1a1928" stop-opacity="0.38" />
+      <stop offset="0.72" stop-color="#1a1928" stop-opacity="0.2" />
+      <stop offset="0.9" stop-color="#ffffff" stop-opacity="0.2" />
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glow">
+      <stop offset="0.35" stop-color="#5266eb" stop-opacity="0.45" />
+      <stop offset="1" stop-color="#5266eb" stop-opacity="0" />
+    </radialGradient>
+    <clipPath id="tile"><rect width="1024" height="1024" rx="224" /></clipPath>
+    <clipPath id="clip"><circle r="64" /></clipPath>
+  </defs>
+  <g clip-path="url(#tile)">
+    <rect width="1024" height="1024" fill="url(#bg)" />
+    <g transform="translate(512 512) scale(4.3)">
+      <circle r="118" fill="url(#glow)" />
+      <g transform="rotate(-18)"><path d="M -108 0 A 108 34 0 0 1 108 0" fill="none" stroke="rgb(156 180 232 / 0.22)" stroke-width="1.6" stroke-linecap="round" /></g>
+      <circle r="64" fill="url(#body)" />
+      <g clip-path="url(#clip)">
+        <circle cx="-22" cy="-20" r="14" fill="url(#crater)" /><circle cx="24" cy="-32" r="9" fill="url(#crater)" />
+        <circle cx="32" cy="14" r="16" fill="url(#crater)" /><circle cx="-36" cy="20" r="10" fill="url(#crater)" />
+        <circle cx="2" cy="36" r="7" fill="url(#crater)" /><circle cx="-8" cy="-48" r="6" fill="url(#crater)" />
+        <circle cx="48" cy="-4" r="5" fill="url(#crater)" /><circle cx="-46" cy="-8" r="8" fill="url(#crater)" />
+        <circle cx="14" cy="6" r="5" fill="url(#crater)" /><circle cx="-14" cy="48" r="5" fill="url(#crater)" />
+        <circle r="64" fill="url(#shade)" />
+      </g>
+      <g transform="rotate(-18)"><path d="M -108 0 A 108 34 0 0 0 108 0" fill="none" stroke="rgb(156 180 232 / 0.75)" stroke-width="2.2" stroke-linecap="round" /></g>
+    </g>
+  </g>
+</svg>

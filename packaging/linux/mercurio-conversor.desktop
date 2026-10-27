@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Mercurio
+GenericName=Conversor de imágenes
+Comment=Convierte imágenes por lotes entre JPEG, PNG, WebP, GIF, BMP, TIFF y SVG
+Comment[en]=Batch image converter for JPEG, PNG, WebP, GIF, BMP, TIFF and SVG
+Exec=mercurio-conversor
+Icon=mercurio-conversor
+Terminal=false
+Categories=Graphics;2DGraphics;RasterGraphics;
+Keywords=imagen;convertir;webp;png;jpeg;svg;image;convert;
+StartupWMClass=mercurio-conversor

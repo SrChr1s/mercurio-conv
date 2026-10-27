@@ -1,0 +1,31 @@
+# Used by scripts/package.sh; VERSION is exported there.
+name: mercurio-conversor
+arch: amd64
+platform: linux
+version: ${VERSION}
+section: graphics
+priority: optional
+maintainer: Chris <c.salazar.vzla@gmail.com>
+homepage: https://github.com/SrChr1s/mercurio-conversor
+description: |
+  Mercurio: conversor de imágenes por lotes.
+  Convierte entre JPEG, PNG, WebP, GIF, BMP, TIFF y SVG, con calidad,
+  tamaño máximo y eliminación de metadatos. Todo se procesa en local.
+contents:
+  - src: build/bin/mercurio-conversor
+    dst: /usr/bin/mercurio-conversor
+    file_info:
+      mode: 0755
+  - src: packaging/linux/mercurio-conversor.desktop
+    dst: /usr/share/applications/mercurio-conversor.desktop
+  - src: packaging/linux/mercurio-conversor.png
+    dst: /usr/share/icons/hicolor/512x512/apps/mercurio-conversor.png
+overrides:
+  deb:
+    depends:
+      - libgtk-3-0
+      - libwebkit2gtk-4.1-0
+  rpm:
+    depends:
+      - gtk3
+      - webkit2gtk4.1

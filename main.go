@@ -6,10 +6,14 @@ import (
 	"github.com/wailsapp/wails/v2"
 	"github.com/wailsapp/wails/v2/pkg/options"
 	"github.com/wailsapp/wails/v2/pkg/options/assetserver"
+	"github.com/wailsapp/wails/v2/pkg/options/linux"
 )
 
 //go:embed all:frontend/dist
 var assets embed.FS
+
+//go:embed build/appicon.png
+var icon []byte
 
 func main() {
 	// Create an instance of the app structure
@@ -28,7 +32,11 @@ func main() {
 		},
 		BackgroundColour: &options.RGBA{R: 23, G: 23, B: 33, A: 255},
 		DragAndDrop:      &options.DragAndDrop{EnableFileDrop: true},
-		OnStartup:        app.startup,
+		Linux: &linux.Options{
+			Icon:        icon,
+			ProgramName: "mercurio-conversor", // Wayland app_id / WM class; matches the .desktop file
+		},
+		OnStartup: app.startup,
 		Bind: []interface{}{
 			app,
 		},

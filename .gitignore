@@ -2,3 +2,6 @@ build/bin
 node_modules
 frontend/dist
 /mercurio-conversor
+dist/
+build/windows/installer/wails_tools.nsh
+build/windows/installer/tmp/
