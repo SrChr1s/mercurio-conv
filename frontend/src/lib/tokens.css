@@ -1,0 +1,82 @@
+/* Tokens from DESIGN.md — the app lives in the "night" world. */
+:root {
+  --primary: #5266eb;
+  --on-primary: #ffffff;
+  --periwinkle: #9cb4e8;
+  --night: #171721;
+  --night-raised: #1e1e2a;
+  --night-lifted: #272737;
+  --on-dark: #ededf3;
+  --fog: #c3c3cc;
+  --slate: #70707d;
+
+  --line: rgb(237 237 243 / 0.08);
+  --line-strong: rgb(237 237 243 / 0.16);
+  --tint: rgb(156 180 232 / 0.14);
+  --tint-hover: rgb(156 180 232 / 0.24);
+
+  --r-xs: 4px;
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --r-xl: 32px;
+  --r-pill: 40px;
+
+  --font: 'Inter Variable', system-ui, sans-serif;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #app { height: 100%; }
+
+body {
+  margin: 0;
+  background: var(--night);
+  color: var(--on-dark);
+  font: 400 16px/1.4 var(--font);
+  font-variation-settings: 'wght' 380;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+  overflow: hidden;
+}
+
+h1, h2, h3, p { margin: 0; }
+h1, h2, h3 { font-weight: 480; font-variation-settings: 'wght' 480; }
+
+button, input { font: inherit; color: inherit; }
+button { cursor: pointer; }
+button:disabled { cursor: default; opacity: 0.4; }
+
+:focus-visible { outline: 2px solid var(--periwinkle); outline-offset: 2px; }
+
+* { scrollbar-width: thin; scrollbar-color: var(--night-lifted) transparent; }
+
+/* Wails: the whole window is a file drop target */
+.drop-target { --wails-drop-target: drop; }
+
+/* Shared pills (DESIGN.md: one solid indigo action, everything else translucent) */
+.pill {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  height: 40px; padding: 0 20px; border: 0; border-radius: var(--r-pill);
+  font-size: 15px; font-variation-settings: 'wght' 440; white-space: nowrap;
+  transition: background 0.15s, filter 0.15s, transform 0.1s;
+}
+.pill:active:not(:disabled) { transform: translateY(1px); }
+.pill.small { height: 32px; padding: 0 14px; font-size: 14px; }
+.pill.tint { background: var(--tint); color: var(--on-dark); }
+.pill.tint:hover:not(:disabled) { background: var(--tint-hover); }
+.pill.primary { background: var(--primary); color: var(--on-primary); border-radius: var(--r-xl); }
+.pill.primary:hover:not(:disabled) { filter: brightness(1.12); }
+.pill.block { width: 100%; }
+
+.eyebrow {
+  font-size: 12px; font-weight: 500; font-variation-settings: 'wght' 500;
+  letter-spacing: 0.9px; text-transform: uppercase; color: var(--fog);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+}
+
+.val, .count { font-variant-numeric: tabular-nums; }
