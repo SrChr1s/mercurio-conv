@@ -85,3 +85,6 @@ El flujo `.github/workflows/release.yml` pasa las pruebas, compila Windows y Lin
 En local, `scripts/package.sh` necesita además `nfpm` (deb/rpm), `makensis` y `zip` (Windows) y, opcionalmente, `appimagetool` (si no está, se omite el AppImage). Windows se compila desde Linux, sin cgo.
 
 El icono se dibuja en `build/appicon.svg`; `build/appicon.png` (1024 px) y `packaging/linux/mercurio-conversor.png` (512 px) se generan a partir de él.
+
+## Licencia
+MIT, ver [LICENSE](LICENSE).
